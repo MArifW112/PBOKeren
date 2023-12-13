@@ -1,4 +1,4 @@
-<h2>Posts</h2>
+<h2>UPLOAD FREE LESSON</h2>
 
 <a href="<?php echo URL; ?>/posts/input" class="btn">Input Post</a>
 
@@ -6,8 +6,10 @@
       <thead>
             <tr>
                   <th>NO</th>
-                  <th>CATEGORI</th>
-                  <th>TITLE</th>
+                  <th>KATEGORI</th>
+                  <th>JUDUL</th>
+                  <th>FOTO</th>
+                  <th>VIDEO</th>
                   <th>EDIT</th>
                   <th>DELETE</th>
             </tr>
