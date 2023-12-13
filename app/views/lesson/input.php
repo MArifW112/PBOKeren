@@ -1,4 +1,4 @@
-<h2>Input Post</h2>
+<h2>UPLOAD FREE LESSON</h2>
 
 <form action="<?php echo URL; ?>/posts/save" method="post">
     <table>
@@ -13,7 +13,7 @@
             </td>
         </tr>
         <tr>
-            <td>TITLE</td>
+            <td>JUDUL</td>
             <td><input type="text" name="post_title" required></td>
         </tr>
         <tr>
