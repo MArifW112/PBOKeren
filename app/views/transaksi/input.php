@@ -16,7 +16,7 @@
         </tr>
         <tr>
             <td>TANGGAL PESAN</td>
-            <td><input type="tanggal_pesan" name="tanggal_pesan" required></td>
+            <td><input type="date" name="tanggal_pesan" required></td>
         </tr>
         <tr>
             <td>TRANSFER KE</td>
