@@ -1,31 +1,27 @@
-<h2>Edit Post</h2>
+<h2>Edit Free Lesson</h2>
 
-<form action="<?php echo URL; ?>/posts/update" method="post">
-<input type="hidden" name="id" value="<?php echo $data['row']['post_id']; ?>">
+<form action="<?php echo URL; ?>/lesson/update" method="post">
+    <input type="hidden" name="id" value="<?php echo $data['row']['id_lesson']; ?>">
     <table>
         <tr>
-            <td>KATEGORI</td>
-            <td>
-                <select name="post_id_cat">
-                    <?php foreach ($data['optcat'] as $opt) { ?>
-                        <option value="<?php echo $opt['cat_id']; ?>" <?php echo $opt['cat_id'] == $data['row']['post_id_cat'] ? "selected" : ""; ?>><?php echo $opt['cat_name']; ?></option>
-                    <?php } ?>
-                </select>
-            </td>
+            <td>Judul</td>
+            <td><input type="text" name="judul" value="<?php echo $data['row']['judul']; ?>" required></td>
         </tr>
         <tr>
-            <td>TITLE</td>
-            <td><input type="text" name="post_title" value="<?php echo $data['row']['post_title']; ?>" required></td>
+            <td>Kategori</td>
+            <td><input type="text" name="kategori" value="<?php echo $data['row']['kategori']; ?>" required></td>
         </tr>
         <tr>
-            <td>TEXT</td>
-            <td>
-                <textarea name="post_text" cols="30" rows="10"><?php echo $data['row']['post_text']; ?></textarea>
-            </td>
+            <td>Deskripsi</td>
+            <td><input type="text" name="deskripsi" value="<?php echo $data['row']['deskripsi']; ?>" required></td>
+        </tr>
+        <tr>
+            <td>Tanggal Upload</td>
+            <td><input type="text" name="tanggal_upload" value="<?php echo $data['row']['tanggal_upload']; ?>" required></td>
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" name="btn_save" value="SAVE"></td>
+            <td><input type="submit" name="btn_update" value="UPDATE"></td>
         </tr>
     </table>
 </form>

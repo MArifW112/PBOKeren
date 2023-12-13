@@ -1,26 +1,23 @@
-<h2>UPLOAD FREE LESSON</h2>
+<h2>Upload Free Lesson</h2>
 
-<form action="<?php echo URL; ?>/posts/save" method="post">
+<form action="<?php echo URL; ?>/lesson/save" method="post">
     <table>
+    <input type="hidden" name="id_lesson">
         <tr>
-            <td>KATEGORI</td>
-            <td>
-                <select name="post_id_cat">
-                    <?php foreach ($data['optcat'] as $opt) { ?>
-                        <option value="<?php echo $opt['cat_id']; ?>"><?php echo $opt['cat_name']; ?></option>
-                    <?php } ?>
-                </select>
-            </td>
+            <td>Judul</td>
+            <td><input type="text" name="judul" required></td>
         </tr>
         <tr>
-            <td>JUDUL</td>
-            <td><input type="text" name="post_title" required></td>
+            <td>Kategori</td>
+            <td><input type="text" name="kategori" required></td>
         </tr>
         <tr>
-            <td>TEXT</td>
-            <td>
-                <textarea name="post_text" cols="30" rows="10"></textarea>
-            </td>
+            <td>Deskripsi</td>
+            <td><input type="text" name="deskripsi" required></td>
+        </tr>
+        <tr>
+            <td>Tanggal Upload</td>
+            <td><input type="text" name="tanggal_upload" required></td>
         </tr>
         <tr>
             <td></td>

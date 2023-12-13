@@ -9,7 +9,7 @@
         </tr>
         <tr>
             <td>NAMA GAME</td>
-            <td><input type="text" name="nama_game"></td>
+            <td><input type="text" name="nama_game" value="<?php echo $data['row']['jenis_game']; ?>" required></td>
         </tr>
         <tr>
             <td>DESKRIPSI</td>

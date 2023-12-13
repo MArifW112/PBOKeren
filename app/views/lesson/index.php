@@ -1,30 +1,30 @@
-<h2>UPLOAD FREE LESSON</h2>
+<h2>Free Lesson</h2>
 
-<a href="<?php echo URL; ?>/posts/input" class="btn">Input Post</a>
+<a href="<?php echo URL; ?>/lesson/input" class="btn">Upload Free Lesson</a>
 
-<table id="dtb">
-      <thead>
+<table>
+      <tr>
+            <th>NO</th>
+            <th>JUDUL</th>
+            <th>KATEGORI</th>
+            <th>DESKRIPSI</th>
+            <th>TANGGAL UPLOAD</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+      </tr>
+
+      <?php $no = 1;
+      foreach ($data['rows'] as $row) { ?>
             <tr>
-                  <th>NO</th>
-                  <th>KATEGORI</th>
-                  <th>JUDUL</th>
-                  <th>FOTO</th>
-                  <th>VIDEO</th>
-                  <th>EDIT</th>
-                  <th>DELETE</th>
+                  <td><?php echo $no; ?></td>
+                  <td><?php echo $row['judul']; ?></td>
+                  <td><?php echo $row['kategori']; ?></td>
+                  <td><?php echo $row['deskripsi']; ?></td>
+                  <td><?php echo $row['tanggal_upload']; ?></td>
+                  <td><a href="<?php echo URL; ?>/lesson/edit/<?php echo $row['id_lesson']; ?>" class="btn">Edit</a></td>
+                  <td><a href="<?php echo URL; ?>/lesson/delete/<?php echo $row['id_lesson']; ?>" class="btn" onclick="return confirm('Are you sure?')">Delete</a></td>
             </tr>
-      </thead>
-      <tbody>
-            <?php $no = 1;
-            foreach ($data['rows'] as $row) { ?>
-                  <tr>
-                        <td><?php echo $no; ?></td>
-                        <td><?php echo $row['cat_name']; ?></td>
-                        <td><?php echo $row['post_title']; ?></td>
-                        <td><a href="<?php echo URL; ?>/posts/edit/<?php echo $row['post_id']; ?>" class="btn">Edit</a></td>
-                        <td><a href="<?php echo URL; ?>/posts/delete/<?php echo $row['post_id']; ?>" class="btn" onclick="return confirm('Are you sure?')">Delete</a></td>
-                  </tr>
-            <?php $no++;
-            } ?>
-      </tbody>
+      <?php $no++;
+      } ?>
+
 </table>

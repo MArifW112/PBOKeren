@@ -58,6 +58,12 @@
 					</a>
 				</li>
 				<li>
+				<li>
+					<a href="<?php echo URL; ?>/lesson">
+						<img class="icon" src="<?php echo AST; ?>/img/menu.png" alt=""> Lesson
+					</a>
+				</li>
+				<li>
 					<a href="<?php echo URL; ?>/dashboard/logout">
 						<img class="icon" src="<?php echo AST; ?>/img/menu.png" alt=""> Logout
 					</a>
