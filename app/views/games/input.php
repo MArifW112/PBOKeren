@@ -16,6 +16,14 @@
             <td><input type="text" name="deskripsi" required></td>
         </tr>
         <tr>
+            <td>TINGKAT KESULITAN</td>
+            <td><input type="text" name="tingkat_kesulitan" required></td>
+        </tr>
+        <tr>
+            <td>RATING</td>
+            <td><input type="text" name="rating" required></td>
+        </tr>
+        <tr>
             <td>PASSWORD</td>
             <td><input type="password" name="password_game" required></td>
         </tr>
